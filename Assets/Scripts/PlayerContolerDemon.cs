@@ -5,8 +5,8 @@ public class PlayerContolerDemon : MonoBehaviour
 {
     public float speed = 5f;
     public int score = 0;
-    public bool hasKey = false;
-    public bool hasWater = false;
+    public bool hasColectableKey = false;
+    public bool hascentipede = false;
     public TextMeshProUGUI textScore;
 	public TextMeshProUGUI notificationText;
 
@@ -43,23 +43,23 @@ public class PlayerContolerDemon : MonoBehaviour
 
 
 
-		if (other.CompareTag("Key"))
+		if (other.CompareTag("ColectableKey"))
         {
-            hasKey = true;
+            hasColectableKey = true;
 			Debug.Log("You got the Key!");
 			ShowNotification("You got the Key!");
 			Destroy(other.gameObject);
 		}
-		if (other.CompareTag("Water"))
+		if (other.CompareTag("centipede"))
 		{
-			hasWater = true;
+			hascentipede = true;
 			Debug.Log("You has touched the Centipede and cannot win");
 			ShowNotification("You has touched the Centipede and cannot win");
 		}
 
 
 		// WIN condition
-		if (score >= 3 && hasKey == true && !hasWater)
+		if (score >= 3 && hasColectableKey == true && !hascentipede)
 		{
 			Debug.Log("You Won!");
 			ShowNotification("You Won!");
