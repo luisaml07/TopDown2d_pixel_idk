@@ -59,7 +59,7 @@ public class PlayerContolerDemon : MonoBehaviour
 
 
 		// WIN condition
-		if (score >= 3 && hasColectableKey == true && !hascentipede)
+		if (score >= 60 && hasColectableKey == true && !hascentipede)
 		{
 			Debug.Log("You Won!");
 			ShowNotification("You Won!");
