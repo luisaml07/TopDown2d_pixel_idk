@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Yaséchat : MonoBehaviour
 {
-    public float rotationSpeed = 90f;
+    public float rotationSpeed = 50f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
