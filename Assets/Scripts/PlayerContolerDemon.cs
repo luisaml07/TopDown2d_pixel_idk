@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class PlayerContolerDemon : MonoBehaviour
 {
@@ -14,5 +15,8 @@ public class PlayerContolerDemon : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
        float moveVertical = Input.GetAxis("Vertical");
+
+       Vector3 direction = new Vector3(moveHorizontal, moveVertical, 0);
+       transform.Translate(direction * speed * Time.deltaTime);
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Colectable3
   - Colectable2
   - centipede
+  - ColectableKey
   layers:
   - Default
   - TransparentFX
