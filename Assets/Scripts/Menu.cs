@@ -1,9 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour
+public class Menu : MonoBehaviour
 {
-    public GameObject opcionesPanel;
+    public GameObject panelCreditos;
+    public GameObject panelOpciones;
+     void Start()
+    {
+        // Aseguro que los paneles empiecen ocultos
+        panelCreditos.SetActive(false);
+        panelOpciones.SetActive(false);
+    }
     public void Jugar ()
     {
         SceneManager.LoadScene(1);
@@ -14,13 +21,23 @@ public class Buttons : MonoBehaviour
         Application.Quit();
     }
 
-    public void AbrirpaneldeOpciones()
-    {
-       opcionesPanel.SetActive(true);
+
+    public void AbrirCreditos()  
+    { 
+        panelCreditos.SetActive(true); 
     }
-    public void CerrarpaneldeOpciones()
-    {
-       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    public void CerrarCreditos() 
+    { 
+        panelCreditos.SetActive(false); 
+    }
+
+    public void AbrirOpciones()  
+    { 
+        panelOpciones.SetActive(true); 
+    }
+    public void CerrarOpciones() 
+    { 
+        panelOpciones.SetActive(false); 
     }
 
 }
